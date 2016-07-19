@@ -98,6 +98,27 @@ __PACKAGE__->add_columns(
 
 __PACKAGE__->set_primary_key("id");
 
+=head1 UNIQUE CONSTRAINTS
+
+=head2 C<name_brand_id_prod_size_id_unique>
+
+=over 4
+
+=item * L</name>
+
+=item * L</brand_id>
+
+=item * L</prod_size_id>
+
+=back
+
+=cut
+
+__PACKAGE__->add_unique_constraint(
+  "name_brand_id_prod_size_id_unique",
+  ["name", "brand_id", "prod_size_id"],
+);
+
 =head1 RELATIONS
 
 =head2 barcodes
@@ -130,8 +151,8 @@ __PACKAGE__->belongs_to(
   {
     is_deferrable => 0,
     join_type     => "LEFT",
-    on_delete     => "CASCADE",
-    on_update     => "NO ACTION",
+    on_delete     => "NO ACTION",
+    on_update     => "CASCADE",
   },
 );
 
@@ -150,8 +171,8 @@ __PACKAGE__->belongs_to(
   {
     is_deferrable => 0,
     join_type     => "LEFT",
-    on_delete     => "CASCADE",
-    on_update     => "NO ACTION",
+    on_delete     => "NO ACTION",
+    on_update     => "CASCADE",
   },
 );
 
@@ -185,8 +206,8 @@ __PACKAGE__->belongs_to(
   {
     is_deferrable => 0,
     join_type     => "LEFT",
-    on_delete     => "CASCADE",
-    on_update     => "NO ACTION",
+    on_delete     => "NO ACTION",
+    on_update     => "CASCADE",
   },
 );
 
@@ -206,8 +227,8 @@ __PACKAGE__->has_many(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2016-07-19 13:02:35
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:Invmh9iYsvOviPXVKXgmAg
+# Created by DBIx::Class::Schema::Loader v0.07042 @ 2016-07-19 15:23:30
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:nRX9J1JWYPab4V5i2PcA+A
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

@@ -85,8 +85,8 @@ __PACKAGE__->belongs_to(
   {
     is_deferrable => 0,
     join_type     => "LEFT",
-    on_delete     => "CASCADE",
-    on_update     => "NO ACTION",
+    on_delete     => "NO ACTION",
+    on_update     => "CASCADE",
   },
 );
 
@@ -121,8 +121,8 @@ __PACKAGE__->might_have(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2016-07-19 13:02:35
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:+xM8UrvtTicdjETdNeVoIw
+# Created by DBIx::Class::Schema::Loader v0.07042 @ 2016-07-19 15:23:30
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:Fdi8xXDAywlqOqMadycKhg
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

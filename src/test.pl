@@ -39,3 +39,35 @@ foreach my $store (@stores)
   print $store->name, "\n";
 }
 
+my $newprod = $schema->resultset('Barcode')->create(
+  {
+    code_type => {
+      name => 'UPC-A',
+    },
+    code => '0072830400053',
+    product => {
+      name => 'Oregon Strawberry Yogurt',
+      brand => {
+        name => 'Tillamook',
+      },
+      prod_size => {
+        value => 6,
+        unit => {
+          single => 'fluid ounce',
+        },
+      },
+      item => {
+        name => 'yogurt singles',
+      },
+    },
+  }
+);
+
+my $newmilk = $schema->resultset('Item')->create(
+  {
+    parent => {
+      name => 'Milk',
+    },
+    name => '2% Milk',
+  }
+);
