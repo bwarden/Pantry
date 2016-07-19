@@ -39,4 +39,3 @@ foreach my $store (@stores)
   print $store->name, "\n";
 }
 
-my $newproduct = $schema->resultset('Product')->new(
