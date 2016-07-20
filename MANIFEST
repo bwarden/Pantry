@@ -1,0 +1,27 @@
+Build.PL
+Changes
+lib/Pantry/Schema.pm
+lib/Pantry/Schema/Result/Barcode.pm
+lib/Pantry/Schema/Result/Brand.pm
+lib/Pantry/Schema/Result/Category.pm
+lib/Pantry/Schema/Result/CategoryToStore.pm
+lib/Pantry/Schema/Result/CodeType.pm
+lib/Pantry/Schema/Result/Event.pm
+lib/Pantry/Schema/Result/Item.pm
+lib/Pantry/Schema/Result/ItemToCategory.pm
+lib/Pantry/Schema/Result/Price.pm
+lib/Pantry/Schema/Result/ProdSize.pm
+lib/Pantry/Schema/Result/Product.pm
+lib/Pantry/Schema/Result/ShoppingList.pm
+lib/Pantry/Schema/Result/Stock.pm
+lib/Pantry/Schema/Result/StockToEvent.pm
+lib/Pantry/Schema/Result/StockToStorage.pm
+lib/Pantry/Schema/Result/Storage.pm
+lib/Pantry/Schema/Result/Store.pm
+lib/Pantry/Schema/Result/Unit.pm
+MANIFEST			This list of files
+README.md
+t/00-load.t
+t/manifest.t
+t/pod-coverage.t
+t/pod.t
